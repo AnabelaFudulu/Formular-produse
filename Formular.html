@@ -1,0 +1,156 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/XHTML1/DTD/XHTML1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/XHTML' lang="ro">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
+	<title>Formular Produse</title>
+	<style type="text/css">
+		<!--
+		input {
+			background-color: #223846;
+			text-transform: uppercase;
+			color: white;
+		}
+
+		#header {
+			background-color: #cccccc;
+		}
+
+		ol {
+			list-style-type: none;
+			margin-left: -15%;
+		}
+
+		legend {
+			background-color: #cccccc;
+			border: solid blue 2px;
+		}
+
+		fieldset {
+			border-color: blue;
+		}
+
+		input#alimente,
+		input#bauturi,
+		input#electrocasnice,
+		input#electronice {
+			background-color: white;
+			border: 0px;
+		}
+
+		input#cutie,
+		input#punga,
+		input#sticla,
+		input#fara {
+			background-color: white;
+			border: 0px;
+		}
+		-->
+	</style>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+	<form method="post" name="produsForm">
+
+
+		<table border="1" rules="none" id="adaugaProdus">
+			<tr id="header">
+				<th colspan="2" align="center">
+					Adauga Produs
+				</th>
+			</tr>
+
+			<tr>
+				<td>Denumire</td>
+				<td>
+					<input type="text" name="denumire" />
+				</td>
+			</tr>
+			<tr>
+				<td>Producator</td>
+				<td>
+					<input type="text" name="producator" id="producator" />
+				</td>
+			</tr>
+			<tr>
+				<td>Pret</td>
+				<td>
+					<input type="text" name="pret" />
+				</td>
+			</tr>
+			<tr>
+				<td>Perisabil</td>
+				<td>
+					<input type="checkbox" name="perisabil" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table>
+						<tr>
+							<td>
+								<fieldset>
+									<legend>Categorie</legend>
+									<ol>
+										<li>
+											<input type="radio" id="alimente" name="categorie" value="a" />
+											alimente
+										</li>
+										<li>
+											<input type="radio" id="bauturi" name="categorie" value="b" />
+											bauturi
+										</li>
+										<li>
+											<input type="radio" id="electrocasnice" name="categorie" value="ec" />
+											electrocasnice
+										</li>
+										<li>
+											<input type="radio" id="electronice" name="categorie" value="en" />
+											electronice
+										</li>
+									</ol>
+								</fieldset>
+							</td>
+
+							<td>
+								<fieldset>
+									<legend>Ambalaj</legend>
+									<ol>
+										<li>
+											<input type="radio" id="cutie" name="ambalaj" value="c" />
+											cutie
+										</li>
+										<li>
+											<input type="radio" id="punga" name="ambalaj" value="p" />
+											punga
+										</li>
+										<li>
+											<input type="radio" id="sticla" name="ambalaj" value="s" />
+											sticla
+										</li>
+										<li>
+											<input type="radio" id="fara" name="ambalaj" value="f" />
+											fara
+										</li>
+									</ol>
+								</fieldset>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td colspan="2" align="center">
+								<input type="reset" value="Goleste" name="cancel" />
+								<input type="submit" value="Salveaza" name="submit" onclick="dateProdus();" />
+
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+	</form>
+</body>
+
+</html>
